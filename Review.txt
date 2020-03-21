@@ -1,0 +1,9 @@
+3|Ahmed|J'aime bien ce Mantau Classique, c'est une pièce efficace pour la protection du froid.|Ahmed@gmail.com|2|2020-03-09
+4|Nabil|Tous mes conseils pour ce manteau classique , c'est extraordinaire.|Nabil@gmail.com|2|2020-03-09
+1|Asmae|c'est vraiment très agréable !!!|Asmae@gmail.com|1|2020-03-09
+3|Nadia| c'est vraiment très bien, c'est super, c'est top ....!!|Nadia@gmail.com|1|2020-03-09
+2|lamia|pas mal|lamia@gmail.com|2|2020-03-16
+1|omar|Je le deteste !!!|omar@gmail.com|4|2020-03-16
+5|laila|Tres comfortable |laila@gmail.com|6|2020-03-16
+3|adam|good one|adam@gmail.com|4|2020-03-16
+4|darii|nicee|darii@gmail.com|1|2020-03-21
