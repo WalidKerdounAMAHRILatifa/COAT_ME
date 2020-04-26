@@ -64,7 +64,7 @@ session_start();
 							</li>
 
 							<li>
-								<a href="contact.php">Contactez-Nous</a>
+								<a href="Contact/contact.php">Contactez-Nous</a>
 							</li>
 						</ul>
 					</div>	
@@ -161,7 +161,7 @@ session_start();
 				</li>
 
 				<li>
-					<a href="contact.php">Contactez-Nous</a>
+					<a href="Contact/contact.php">Contactez-Nous</a>
 				</li>
 
 			</ul>
@@ -192,14 +192,14 @@ session_start();
 					</li>
 
 					<li class="p-b-13">
-						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
-							Liste d'envie
+						<a href="Plateforme_admin/pages/login.php" class="stext-102 cl2 hov-cl1 trans-04">
+							Mon Compte
 						</a>
 					</li>
 
 					<li class="p-b-13">
-						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
-							Mon Compte
+						<a href="Rapport/Rapport COAT_ME.pdf" class="stext-102 cl2 hov-cl1 trans-04">
+							Telecharger le Rapport du Projet
 						</a>
 					</li>
 				</ul>
@@ -757,7 +757,7 @@ session_start();
 					   </div>
 						<div class="col-sm-6 col-lg-3 p-b-50" id="step-back">
 							<li class="p-b-10">
-									<a href="product.php" class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" >
+									<a href="product.php" class="stext-107 cl7 hov-cl1 trans-04" >
 										<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" >
 											Femme
 										</button>

@@ -64,7 +64,7 @@ session_start();
 							</li>
 
 							<li>
-								<a href="contact.php">Contactez-Nous</a>
+								<a href="Contact/contact.php">Contactez-Nous</a>
 							</li>
 						</ul>
 					</div>	
@@ -163,7 +163,7 @@ session_start();
 				</li>
 
 				<li>
-					<a href="contact.php">Contactez-Nous</a>
+					<a href="Contact/contact.php">Contactez-Nous</a>
 				</li>
 
 			</ul>
@@ -325,8 +325,8 @@ session_start();
 
 									<div class="size-204 respon6-next">
 										<div class="rs1-select2 bor8 bg0">
-											<select class="js-select2" name="taille">
-												<option>Choisissez une taille</option>
+											<select required class="js-select2" name="taille">
+												<option disabled selected value>Choisissez une taille</option>
 
 												<?php $size_Produit=explode(",", $row['size_Produit']);
 														
@@ -348,8 +348,8 @@ session_start();
 									<div class="size-204 respon6-next">
 										<div class="rs1-select2 bor8 bg0">
 
-											<select class="js-select2" name="couleur">
-												<option>Choisissez une couleur</option>
+											<select required class="js-select2" name="couleur">
+												<option disabled selected value>Choisissez une couleur</option>
 											<?php $couleur_Produit=explode(",", $row['couleur']);
 														
 														for ($n=0; $n <sizeof($couleur_Produit) ; $n++) { 

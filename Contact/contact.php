@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,30 +8,31 @@ session_start();
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/coat.png"/>
+	<link rel="icon" type="image/png" href="../images/icons/coat.png"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/iconic/css/material-design-iconic-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../fonts/linearicons-v1.0.0/icon-font.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
 <!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/select2/select2.min.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+	<link rel="stylesheet" type="text/css" href="../vendor/perfect-scrollbar/perfect-scrollbar.css">
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/util.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
 <!--===============================================================================================-->
 </head>
+
 <body class="animsition">
 	
 	<!-- Header -->
@@ -43,23 +43,23 @@ session_start();
 				<nav class="limiter-menu-desktop p-l-45">
 					
 					<!-- Logo desktop -->		
-					<a href="index.php" class="logo">
-						<img src="images/icons/logo4.png" alt="IMG-LOGO">
+					<a href="../index.php" class="logo">
+						<img src="../images/icons/logo4.png" alt="IMG-LOGO">
 					</a>
 
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li>
-								<a href="index.php">Acceuil</a>
+								<a href="../index.php">Acceuil</a>
 							</li>
 
 							<li>
-								<a href="product.php">Produit</a>
+								<a href="../product.php">Produit</a>
 							</li>
 
 							<li>
-								<a href="contact.php">Contactez-Nous</a>
+								<a href="../contact.php">Contactez-Nous</a>
 							</li>
 						</ul>
 					</div>	
@@ -70,7 +70,7 @@ session_start();
 							<div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="
 							<?php  
 							
-								require_once('database.php');
+								require_once('../database.php');
 								if(isset($_SESSION['id_Personne'])==true){
 								$id=$_SESSION['id_Personne'] ;
 								$resul = $conn->prepare("SELECT count(id_Panier) as id_Panier FROM panier where id_Client=$id ");
@@ -94,7 +94,7 @@ session_start();
 							</div>
 						</div>
 						<?php if(isset($_SESSION['id_Personne'])==true){
-							echo "<form method='POST' action='AjouterPanier.php'><button type='submit' name='logout' style='background:url(images/icons/logout.png);width:38px;height:38px;margin-right:5px;'></button></form>";
+							echo "<form method='POST' action='../AjouterPanier.php'><button type='submit' name='logout' style='background:url(../images/icons/logout.png);width:38px;height:38px;margin-right:5px;'></button></form>";
 						}
 							?>
 					</div>
@@ -106,7 +106,7 @@ session_start();
 		<div class="wrap-header-mobile">
 			<!-- Logo moblie -->		
 			<div class="logo-mobile">
-				<a href="index.php"><img src="images/icons/logo4.png" alt="IMG-LOGO"></a>
+				<a href="../index.php"><img src="../images/icons/logo4.png" alt="IMG-LOGO"></a>
 			</div>
 
 			<!-- Icon header -->
@@ -115,7 +115,7 @@ session_start();
 					<div class="icon-header-item cl0 hov-cl1 trans-04 p-lr-11 icon-header-noti js-show-cart" data-notify="
 					<?php  
 							
-								require_once('database.php');
+								require_once('../database.php');
 								if(isset($_SESSION['id_Personne'])==true){
 								$id=$_SESSION['id_Personne'] ;
 								$resul = $conn->prepare("SELECT count(id_Panier) as id_Panier FROM panier where id_Client=$id ");
@@ -148,15 +148,15 @@ session_start();
 
 			<ul class="main-menu-m">
 				<li>
-					<a href="index.php">Acceuil</a>
+					<a href="../index.php">Acceuil</a>
 				</li>
 
 				<li>
-					<a href="product.php">Produit</a>
+					<a href="../product.php">Produit</a>
 				</li>
 
 				<li>
-					<a href="contact.php">Contactez-Nous</a>
+					<a href="../contact.php">Contactez-Nous</a>
 				</li>
 
 			</ul>
@@ -177,19 +177,13 @@ session_start();
 			<div class="sidebar-content flex-w w-full p-lr-65 js-pscroll">
 				<ul class="sidebar-link w-full">
 					<li class="p-b-13">
-						<a href="index.php" class="stext-102 cl2 hov-cl1 trans-04">
+						<a href="../index.php" class="stext-102 cl2 hov-cl1 trans-04">
 							Acceuil
 						</a>
 					</li>
 
 					<li class="p-b-13">
-						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
-							Liste d'envie
-						</a>
-					</li>
-
-					<li class="p-b-13">
-						<a href="#" class="stext-102 cl2 hov-cl1 trans-04">
+						<a href="Plateforme_admin/pages/login.php" class="stext-102 cl2 hov-cl1 trans-04">
 							Mon Compte
 						</a>
 					</li>
@@ -203,56 +197,56 @@ session_start();
 					<div class="flex-w flex-sb p-t-36 gallery-lb">
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="imageProduit/class1.jpg" data-lightbox="gallery" 
-							style="background-image: url('imageProduit/class1.jpg');"></a>
+							<a class="item-gallery bg-img1" href="../imageProduit/class1.jpg" data-lightbox="gallery" 
+							style="background-image: url('../imageProduit/class1.jpg');"></a>
 						</div>
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="imageProduit/1.jpg" data-lightbox="gallery" 
-							style="background-image: url('imageProduit/1.jpg');"></a>
+							<a class="item-gallery bg-img1" href="../imageProduit/1.jpg" data-lightbox="gallery" 
+							style="background-image: url('../imageProduit/1.jpg');"></a>
 						</div>
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="imageProduit/casual1.jpg" data-lightbox="gallery" 
-							style="background-image: url('imageProduit/casual1.jpg');"></a>
+							<a class="item-gallery bg-img1" href="../imageProduit/casual1.jpg" data-lightbox="gallery" 
+							style="background-image: url('../imageProduit/casual1.jpg');"></a>
 						</div>
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="imageProduit/ca2.jpg" data-lightbox="gallery" 
-							style="background-image: url('imageProduit/ca2.jpg');"></a>
+							<a class="item-gallery bg-img1" href="../imageProduit/ca2.jpg" data-lightbox="gallery" 
+							style="background-image: url('../imageProduit/ca2.jpg');"></a>
 						</div>
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="imageProduit/sport1.jpg" data-lightbox="gallery" 
-							style="background-image: url('imageProduit/sport1.jpg');"></a>
+							<a class="item-gallery bg-img1" href="../imageProduit/sport1.jpg" data-lightbox="gallery" 
+							style="background-image: url('../imageProduit/sport1.jpg');"></a>
 						</div>
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="imageProduit/w3.jpg" data-lightbox="gallery" 
-							style="background-image: url('imageProduit/w3.jpg');"></a>
+							<a class="item-gallery bg-img1" href="../imageProduit/w3.jpg" data-lightbox="gallery" 
+							style="background-image: url('../imageProduit/w3.jpg');"></a>
 						</div>
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="imageProduit/class2.jpg" data-lightbox="gallery" 
-							style="background-image: url('imageProduit/class2.jpg');"></a>
+							<a class="item-gallery bg-img1" href="../imageProduit/class2.jpg" data-lightbox="gallery" 
+							style="background-image: url('../imageProduit/class2.jpg');"></a>
 						</div>
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="imageProduit/4.jpg" data-lightbox="gallery" 
-							style="background-image: url('imageProduit/4.jpg');"></a>
+							<a class="item-gallery bg-img1" href="../imageProduit/4.jpg" data-lightbox="gallery" 
+							style="background-image: url('../imageProduit/4.jpg');"></a>
 						</div>
 
 						<!-- item gallery sidebar -->
 						<div class="wrap-item-gallery m-b-10">
-							<a class="item-gallery bg-img1" href="imageProduit/casual2.jpg" data-lightbox="gallery" 
-							style="background-image: url('imageProduit/casual2.jpg');"></a>
+							<a class="item-gallery bg-img1" href="../imageProduit/casual2.jpg" data-lightbox="gallery" 
+							style="background-image: url('../imageProduit/casual2.jpg');"></a>
 						</div>
 					</div>
 				</div>
@@ -288,10 +282,10 @@ session_start();
 			<div class="header-cart-content flex-w js-pscroll">
 				<ul class="header-cart-wrapitem w-full">
 
-					<form method="POST" action="AjouterPanier.php">
+					<form method="POST" action="../AjouterPanier.php">
 						<?php  
 							
-								require_once('database.php');
+								require_once('../database.php');
 								$id=0;
 								if(isset($_SESSION['id_Personne'])==true){
 								$id=$_SESSION['id_Personne'] ;}
@@ -303,7 +297,7 @@ session_start();
 
 					<li class="header-cart-item flex-w flex-t m-b-12">
 						<div class="header-cart-item-img">
-							<img src="imageProduit/<?php echo $row['image_Produit']; ?>" alt="IMG">
+							<img src="../imageProduit/<?php echo $row['image_Produit']; ?>" alt="IMG">
 						</div>
 
 						<div class="header-cart-item-txt p-t-8">
@@ -311,7 +305,7 @@ session_start();
 								Mantau Classique 
 							</a>
 							<input type="hidden" name="id_Panier" value="<?php echo $row['id_Panier'];?>">
-							<button name="delete" type="submit" style="background: url(images/icons/icon-close3.png);width: 15px;height: 15px;float:right;margin-bottom: 10px;"></button>
+							<button name="delete" type="submit" style="background: url(../images/icons/icon-close3.png);width: 15px;height: 15px;float:right;margin-bottom: 10px;"></button>
 							<span class="header-cart-item-info">
 								<?php echo $row['quantite_Panier']." x ".$row['sub_total']."DH"; ?> 
 							</span>
@@ -332,11 +326,11 @@ session_start();
 					</div>
 
 					<div class="header-cart-buttons flex-w w-full">
-						<a href="shoping-cart.php" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+						<a href="../shoping-cart.php" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
 							Consulter Votre Panier
 						</a>
 
-						<a href="shoping-cart.php" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+						<a href="../shoping-cart.php" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
 							check-out
 
 						</a>
@@ -347,35 +341,74 @@ session_start();
 	</div>
 
 	<!-- Title page -->
-	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('images/bg-01.jpg');">
+	<section class="bg-img1 txt-center p-lr-15 p-tb-92" style="background-image: url('../images/bg-01.jpg');">
 		<h2 class="ltext-105 cl0 txt-center">
 			Contactez-Nous
 		</h2>
 	</section>	
+	<section class="bg0">
+		<?php
+			if(isset($_POST['envoyer'])){
+			require 'PHPMailerAutoload.php';
+			$mail = new PHPMailer;
 
+			$email = $_POST['email'];
+			$message = $_POST['msg'];
+			//$mail->SMTPDebug = 2;                               // Enable verbose debug output
 
+			$mail->isSMTP();                                      // Set mailer to use SMTP
+			$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+			$mail->SMTPAuth = true;                               // Enable SMTP authentication
+			$mail->Username = 'noreply.coatme@gmail.com';               // SMTP username
+			$mail->Password = 'kerdounamahri@2020';                      // SMTP password
+			$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+			$mail->Port = 587;  
+
+			$mail->setFrom('noreply.coatme@gmail.com', 'COAT_ME Company');
+			$mail->addAddress($email, 'COAT_ME Contact');     // Add a recipient
+			//$mail->addReplyTo($email, 'Information');
+			$mail->isHTML(true); 
+
+			$mail->Subject = 'COAT_ME Contact';
+			$mail->Body    = 'Nous avons reçu votre Message : '.'<b>'.$message.'</b>.'.' <br> Vous recevrez notre Message dés que possible.';
+
+			//$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+			if(!$mail->send()) {
+				echo "<br><br><br><br><h3 class='mtext-105 cl2 txt-center p-b-30' style='color:red;'>Message Non Envoyer.!</h3>";
+				echo "Mailer Error: " . $mail->ErrorInfo;
+			} else {
+				echo "<br><br><br><br><h3 class='mtext-105 cl2 txt-center p-b-30' style='color:green;'>Message Envoye Avec Success.</h3>";
+
+				date_default_timezone_set('UTC');
+				$fp = fopen('email.txt','a+');
+				$ligne = fputs($fp,$email.'|'.$message.'|'.date("Y-m-d H:i:s")."\n");
+				fclose($fp);
+			}
+			}
+		?>
+	</section>
 	<!-- Content page -->
 	<section class="bg0 p-t-104 p-b-116">
 		<div class="container">
 			<div class="flex-w flex-tr">
 				<div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
-					<form>
+					<form action="contact.php" method="POST">
 						<h4 class="mtext-105 cl2 txt-center p-b-30">
 							Envoyez-Nous Un Message
 						</h4>
+					
 
 						<div class="bor8 m-b-20 how-pos4-parent">
 							<input class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder="Votre Adresse Email">
-							<img class="how-pos4 pointer-none" src="images/icons/icon-email.png" alt="ICON">
+							<img class="how-pos4 pointer-none" src="../images/icons/icon-email.png" alt="ICON">
 						</div>
 
 						<div class="bor8 m-b-30">
 							<textarea class="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="msg" placeholder="Comment Nous Pouvons Vous-Aidez ??"></textarea>
 						</div>
-
-						<button class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
-							Envoyez
-						</button>
+						<div class="popup2020" onclick="myFunction2020()">
+						<input class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer" type="submit" name="envoyer" value="Envoyer">
+ 						</div>
 					</form>
 				</div>
 
@@ -435,7 +468,7 @@ session_start();
 	
 	<!-- Map -->
 	<div class="map">
-		<div class="size-303" id="google_map" data-map-x="40.691446" data-map-y="-73.886787" data-pin="images/icons/pin.png" data-scrollwhell="0" data-draggable="1" data-zoom="11"></div>
+		<div class="size-303" id="google_map" data-map-x="40.691446" data-map-y="-73.886787" data-pin="../images/icons/pin.png" data-scrollwhell="0" data-draggable="1" data-zoom="11"></div>
 	</div>
 
 
@@ -457,7 +490,7 @@ session_start();
 	
 							<div class="col-sm-6 col-lg-3 p-b-50">
 								<li class="p-b-10">
-										<a href="product.php" class="stext-107 cl7 hov-cl1 trans-04">
+										<a href="../product.php" class="stext-107 cl7 hov-cl1 trans-04">
 											<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" >
 												Homme
 											</button>
@@ -466,7 +499,7 @@ session_start();
 						   </div>
 							<div class="col-sm-6 col-lg-3 p-b-50" id="step-back">
 								<li class="p-b-10">
-										<a href="product.php" class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" >
+										<a href="../product.php" class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" >
 											<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" >
 												Femme
 											</button>
@@ -478,7 +511,7 @@ session_start();
 				</div>
 						<p class="stext-107 cl6 txt-center">
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-							Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Ce Site est Realisé par <a href="index.php" target="_blank">KERDOUN Walid && AMAHRI Latifa</a>
+							Copyright &copy;<script>document.write(new Date().getFullYear());</script> | Ce Site est Realisé par <a href="../index.php" target="_blank">KERDOUN Walid && AMAHRI Latifa</a>
 	
 						</p>
 				</div>
@@ -492,14 +525,14 @@ session_start();
 	</div>
 
 <!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<script src="../vendor/animsition/js/animsition.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../vendor/bootstrap/js/popper.js"></script>
+	<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
+	<script src="../vendor/select2/select2.min.js"></script>
 	<script>
 		$(".js-select2").each(function(){
 			$(this).select2({
@@ -509,9 +542,9 @@ session_start();
 		})
 	</script>
 <!--===============================================================================================-->
-	<script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+	<script src="../vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
 <!--===============================================================================================-->
-	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="../vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 	<script>
 		$('.js-pscroll').each(function(){
 			$(this).css('position','relative');
@@ -529,9 +562,9 @@ session_start();
 	</script>
 <!--===============================================================================================-->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
-	<script src="js/map-custom.js"></script>
+	<script src="../js/map-custom.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
+	<script src="../js/main.js"></script>
 
 </body>
 </html>

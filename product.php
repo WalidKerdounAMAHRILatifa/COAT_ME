@@ -66,7 +66,7 @@ session_start();
 							</li>
 
 							<li>
-								<a href="contact.php">Contactez-Nous</a>
+								<a href="Contact/contact.php">Contactez-Nous</a>
 							</li>
 						</ul>
 					</div>	
@@ -92,11 +92,6 @@ session_start();
 							?>
 							">
 								<i class="zmdi zmdi-shopping-cart"></i>
-							</div>
-						</div>
-						<div class="flex-c-m h-full p-r-25 bor6">
-							<div class="icon-header-item cl12 hov-cl1 trans-04 p-lr-22 p-r-11 icon-header-noti " data-notify="0">
-								<i class="zmdi zmdi-favorite-outline"></i>
 							</div>
 						</div>
 						<?php if(isset($_SESSION['id_Personne'])==true){
@@ -163,7 +158,7 @@ session_start();
 				</li>
 
 				<li>
-					<a href="contact.php">Contactez-Nous</a>
+					<a href="Contact/contact.php">Contactez-Nous</a>
 				</li>
 
 			</ul>
@@ -268,95 +263,6 @@ session_start();
 						Homme
 					</button>
 				</div>
-
-				<div class="flex-w flex-c-m m-tb-10">
-					<div class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter">
-						<i class="icon-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-filter-list"></i>
-						<i class="icon-close-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
-						 Filter
-					</div>
-				</div>
-				
-				<!-- Search product -->
-				<div class="dis-none panel-search w-full p-t-10 p-b-15">
-					<div class="bor8 dis-flex p-l-15">
-						<button class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04">
-							<i class="zmdi zmdi-search"></i>
-						</button>
-
-						<input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product" placeholder="Search">
-					</div>	
-				</div>
-
-				<!-- Filter -->
-				<div class="dis-none panel-filter w-full p-t-10">
-					<div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm">
-						<div class="filter-col1 p-r-15 p-b-27">
-							<div class="mtext-102 cl2 p-b-15">
-								Categories
-							</div>
-
-							
-						</div>
-
-						<div class="filter-col2 p-r-15 p-b-27">
-							<div class="mtext-102 cl2 p-b-15">
-								Hommes
-							</div>
-
-							<ul>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Casual
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Class
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Sport
-									</a>
-								</li>
-
-							</ul>
-						</div>
-
-						<div class="filter-col3 p-r-15 p-b-27">
-							<div class="mtext-102 cl2 p-b-15">
-								Femmes
-							</div>
-
-							<ul>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Casual
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Class
-									</a>
-								</li>
-
-								<li class="p-b-6">
-									<a href="#" class="filter-link stext-106 trans-04">
-										Sport
-									</a>
-								</li>
-
-							</ul>
-						</div>
-
-					</div>
-				</div>
 			</div>
 	
 			<div class="row isotope-grid">
@@ -390,13 +296,6 @@ session_start();
 								<span class="stext-105 cl3">
 									<?php echo $row['prix_Produit']; ?> DH
 								</span>
-							</div>
-
-							<div class="block2-txt-child2 flex-r p-t-3">
-								<a href="#" class="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-									<img class="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON">
-									<img class="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON">
-								</a>
 							</div>
 						</div>
 					</div>

@@ -62,7 +62,7 @@ session_start();
 							</li>
 
 							<li>
-								<a href="contact.php">Contactez-Nous</a>
+								<a href="Contact/contact.php">Contactez-Nous</a>
 							</li>
 						</ul>
 					</div>	
@@ -154,7 +154,7 @@ session_start();
 				</li>
 
 				<li>
-					<a href="contact.php">Contactez-Nous</a>
+					<a href="Contact/contact.php">Contactez-Nous</a>
 				</li>
 
 			</ul>
@@ -253,7 +253,7 @@ session_start();
 		
 
 	<!-- Shoping Cart -->
-	<form class="bg0 p-t-75 p-b-85">
+	<form class="bg0 p-t-75 p-b-85" method="POST" action="AjouterPanier.php">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
@@ -268,7 +268,7 @@ session_start();
 									<th class="column-5">Total</th>
 								</tr>
 								<?php  
-							
+								
 								require_once('database.php');
 								$id=0;
 								if(isset($_SESSION['id_Personne'])==true){
@@ -278,7 +278,7 @@ session_start();
 								for($i=0; $row1 = $resul->fetch(); $i++){
 									
 								?>
-
+								
 								<tr class="table_row">
 									<td class="column-1">
 										<div class="how-itemcart1">
@@ -302,15 +302,14 @@ session_start();
 									</td>
 									<td class="column-5"><?php echo $row1['quantite_Panier']*$row1['sub_total']."DH"; ?> </td>
 								</tr>
+
 								<?php } ?>
 								
 							</table>
-						</div>
-
+						</div>		
 						<div class="flex-w flex-sb-m bor15 p-t-18 p-b-15 p-lr-40 p-lr-15-sm">
-
-							<div class="flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10">
-								Modifier Le Panier
+							<div>
+								<input class="flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10" type="submit" name="vider" value="Vider Le Panier"> 
 							</div>
 						</div>
 					</div>

@@ -38,10 +38,10 @@
             <div class="card-body">
                 <form method="POST" action="connexion.php">
                     <div class="form-group">
-                        <input class="form-control form-control-lg"  type="email" name="email" placeholder="E-mail" autocomplete="off">
+                        <input class="form-control form-control-lg"  type="email" name="email" placeholder="E-mail" value="<?php if(isset($_COOKIE["login"])) { echo $_COOKIE["login"]; } ?>">
                     </div>
                     <div class="form-group">
-                        <input class="form-control form-control-lg" id="password" name="password" type="password" placeholder="Mot De Passe">
+                        <input class="form-control form-control-lg" id="password" name="password" type="password" placeholder="Mot De Passe" value="<?php if(isset($_COOKIE["password"])) { echo $_COOKIE["password"]; } ?>">
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg btn-block" name="Connexion">Connexion</button>
                 </form>

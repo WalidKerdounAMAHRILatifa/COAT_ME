@@ -4,7 +4,7 @@ require_once('database.php');
 if(isset($_POST["sub"])){
 	if(!isset($_SESSION['id_Personne'])){
 		session_destroy();
-		header('location:plateforme_admin/pages/login.html');
+		header('location:plateforme_admin/pages/login.php');
 	}else{
 		$taille=$_POST['taille'];
 		$couleur=$_POST['couleur'];
@@ -34,6 +34,15 @@ $sql = "DELETE from panier where id_Panier=$id_Panier";
 
 
 if(isset($_POST['logout'])){header('location:index.php'); session_destroy();	}
+
+if(isset($_POST['vider'])){
+	require_once('database.php');
+	$id_Client=$_SESSION['id_Personne'];
+$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$sql = "DELETE from panier where id_Client=$id_Client";
+	$conn->exec($sql);
+	header('location:shoping-cart.php');
+}
 
 
 

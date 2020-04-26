@@ -63,7 +63,7 @@ session_start();
 							</li>
 
 							<li>
-								<a href="contact.php">Contactez-Nous</a>
+								<a href="Contact/contact.php">Contactez-Nous</a>
 							</li>
 						</ul>
 					</div>	
@@ -110,7 +110,7 @@ session_start();
 				</li>
 
 				<li>
-					<a href="contact.php">Contactez-Nous</a>
+					<a href="Contact/contact.php">Contactez-Nous</a>
 				</li>
 
 			</ul>
