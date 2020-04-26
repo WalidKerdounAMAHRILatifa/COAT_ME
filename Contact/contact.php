@@ -359,12 +359,12 @@ session_start();
 			$mail->isSMTP();                                      // Set mailer to use SMTP
 			$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 			$mail->SMTPAuth = true;                               // Enable SMTP authentication
-			$mail->Username = 'noreply.coatme@gmail.com';               // SMTP username
-			$mail->Password = 'kerdounamahri@2020';                      // SMTP password
+			$mail->Username = 'example@gmail.com';               // SMTP username
+			$mail->Password = 'xxxx';                      // SMTP password
 			$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
 			$mail->Port = 587;  
 
-			$mail->setFrom('noreply.coatme@gmail.com', 'COAT_ME Company');
+			$mail->setFrom('example@gmail.com', 'COAT_ME Company');
 			$mail->addAddress($email, 'COAT_ME Contact');     // Add a recipient
 			//$mail->addReplyTo($email, 'Information');
 			$mail->isHTML(true); 
